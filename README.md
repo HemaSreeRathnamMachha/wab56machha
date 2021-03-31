@@ -7,4 +7,4 @@ Class name: Ornament<br>
 Attributes:<br>
 Model (String)<br>
 Designer (String)<br>
-Cost (Number)<br>
+Price (Number)<br>
