@@ -5,7 +5,11 @@ block content
   h1= title
   - var result=[{Model:"Ring",Designer:"Sabya",Price:200.59},{Model:"Necklace",Designer:"Manish",Price:107.39},{Model:"Nosepin",Designer:"Mj",Price:23.99}] 
   div(class="row")
-    each form in result
-      div(class = "col-sm-2") #{form.Model}
-      div(class = "col-sm-2") #{form.Designer}
-      div(class = "col-sm-2") #{form.Price}
+    each form,index  in result
+      div(class = "col-sm-2" onclick=`buy(${index})`) #{form.Model}-#{form.Designer}-#{form.Price}
+  script.
+     
+      function buy(itemNo)
+      {
+        alert(`You purchased Item ${itemNo+1}`)
+      }
